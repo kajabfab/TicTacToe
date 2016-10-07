@@ -5,28 +5,41 @@
     <title>GAME | TIC TAC TOE</title>
 </head>
 <body>
+    <!--Load libraries from CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <!--Load controllers-->
+    <script src="controller.js"></script>
+
+    <!--Load CSS-->
+    <link rel="stylesheet" href="design.css">
+
     <h1 class="game-heading">TIC TAC TOE</h1>
     <h3 class="game-sub-heading">The best game ever...</h3>
 
     <hr class="game-heading-separator">
 
-    <table class="game-board">
-        <tr class="game-board-row">
-            <td class="game-board-box"></td>
-            <td class="game-board-box"></td>
-            <td class="game-board-box"></td>
-        </tr>
-        <tr class="game-board-row">
-            <td class="game-board-box"></td>
-            <td class="game-board-box"></td>
-            <td class="game-board-box"></td>
-        </tr>
-        <tr class="game-board-row">
-            <td class="game-board-box"></td>
-            <td class="game-board-box"></td>
-            <td class="game-board-box"></td>
-        </tr>
-    </table>
+    <div ng-app="game" ng-controller="play">
+        <table class="game-board">
+            <tr class="game-board-row" ng-init="">
+                <th colspan="3">It's player {{whosturn()}}'s turn</th>
+            </tr>
+            <tr class="game-board-row">
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+            </tr>
+            <tr class="game-board-row">
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+            </tr>
+            <tr class="game-board-row">
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+                <td class="game-board-box"><img class="game-board-mark" src="" ng-click="mark($event)"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

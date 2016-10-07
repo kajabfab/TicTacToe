@@ -1,0 +1,12 @@
+.game-board-box
+{
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+}
+
+.game-board-mark
+{
+    height: 30px;
+    width: 30px;
+}
